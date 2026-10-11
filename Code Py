@@ -1,0 +1,15 @@
+
+def tower_of_hanoi(n, asal, bantuan, tujuan):
+    if n == 1:
+        print(f"Pindahkan cakram 1 dari {asal} ke {tujuan}")
+        return
+
+    tower_of_hanoi(n - 1, asal, tujuan, bantuan)
+    print(f"Pindahkan cakram {n} dari {asal} ke {tujuan}")
+    tower_of_hanoi(n - 1, bantuan, asal, tujuan)
+
+
+jumlah_cakram = 3
+
+print("Langkah penyelesaian Tower of Hanoi:")
+tower_of_hanoi(jumlah_cakram, "A", "B", "C")
